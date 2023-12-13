@@ -12,6 +12,6 @@ class CurrencyTest extends TestCase
         $brazilianReal = Currency::BRL;
         $this->assertInstanceOf(Currency::class, $brazilianReal);
         $this->assertEquals('BRL', $brazilianReal->value);
-        $this->assertEquals('Brazilian real', $brazilianReal->label());
+        $this->assertEquals('Brazil Real', $brazilianReal->label());
     }
 }

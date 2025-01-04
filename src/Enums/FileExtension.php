@@ -125,4 +125,15 @@ enum FileExtension: string implements EnumContract
     {
         return in_array($mimeType, self::mimeTypes());
     }
+
+    public static function parse(string $value): self
+    {
+        $lowerValue = strtolower($value);
+
+        if (str_starts_with($lowerValue, '.')) {
+            return self::from($lowerValue);
+        } else {
+            return self::from(".$lowerValue");
+        }
+    }
 }
